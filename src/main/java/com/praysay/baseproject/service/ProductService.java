@@ -14,6 +14,7 @@ public class ProductService {
     private ProductRepository productRepository;
 
     public List<Product> getProducts() {
+//        BooleanBuilder builder = new BooleanBuilder();
         return productRepository.findAll();
     }
 
