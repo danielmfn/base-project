@@ -4,7 +4,7 @@ import com.praysay.baseproject.model.Product;
 import com.praysay.baseproject.model.QProduct;
 import com.praysay.baseproject.repository.ProductRepository;
 import com.querydsl.core.BooleanBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
+@AllArgsConstructor
 public class ProductService {
 
-    @Autowired
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public List<Product> getProducts() {
         BooleanBuilder builder = new BooleanBuilder();
