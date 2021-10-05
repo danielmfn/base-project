@@ -18,6 +18,7 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
+    // Uso do Predicate apenas didático, será migrado para uma busca filtrada e nesse será incluído paginação
     public List<Product> getProducts() {
         BooleanBuilder builder = new BooleanBuilder();
         QProduct qProduct = QProduct.product;
