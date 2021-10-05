@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -22,4 +23,5 @@ public class Product {
     private String name;
     @Column
     private BigDecimal price;
+
 }
